@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yipeng Zhang - Senior Software Engineer</title>
+    <style>
+        :root {
+            --primary-color: #1a365d;
+            --secondary-color: #2b6cb0;
+            --text-color: #2d3748;
+            --border-color: #e2e8f0;
+            --background-color: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-color);
+            background-color: #f7fafc;
+            line-height: 1.5;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--background-color);
+            padding: 50px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin: 0 0 5px 0;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            margin: 0 0 15px 0;
+            font-weight: 600;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin: 30px 0 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        p {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+            text-align: justify;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .job-company {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .job-date {
+            color: #718096;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        ul {
+            margin: 0 0 15px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px 20px;
+        }
+
+        .skill-category {
+            font-size: 0.95rem;
+        }
+
+        .skill-category strong {
+            color: var(--primary-color);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 10px; }
+            .resume-container { padding: 20px; }
+            .job-header { flex-direction: column; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            body { background: none; padding: 0; }
+            .resume-container { box-shadow: none; padding: 0; max-width: 100%; }
+            @page { margin: 1.5cm; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-container">
+    <header>
+        <h1>Yipeng Zhang</h1>
+        <div class="subtitle">Senior Software Engineer | Full-Stack & Front-End</div>
+        <div class="contact-info">
+            (201) 960-8732 &nbsp;|&nbsp; 
+            <a href="mailto:yipeng.zhang.careers@gmail.com">yipeng.zhang.careers@gmail.com</a> &nbsp;|&nbsp; 
+            Metuchen, NJ &nbsp;|&nbsp; 
+            <a href="https://linkedin.com" target="_blank">://linkedin.com</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Senior full-stack / front-end engineer with 12+ years delivering production web applications, including 7+ years at Nokia building React + TypeScript platforms for the WaveSuite optical-DWDM and OTN network-management product family. Sole author of major UI features later extracted into shared libraries reused across 5+ products, sustaining 970+ resolved tickets and 2,600+ commits across OTN, the shared redux-framework, and Nokia's GHC ui-framework, with deep ownership across React, Java/Spring REST services, build systems, and GitLab CI/CD. Use an AI-integrated SDLC, Cursor as primary IDE and AI embedded in CI/CD for testing, release, and review, keeping human review on architecture and quality.</p>
+    </section>
+
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-category"><strong>AI-Augmented:</strong> Cursor, LLM refactoring, GitLab CI/CD AI automation, prompt engineering</div>
+            <div class="skill-category"><strong>Languages:</strong> TypeScript, JavaScript, Java, Python, SQL, HTML5, CSS3</div>
+            <div class="skill-category"><strong>Frontend:</strong> React, Redux, redux-saga, React Router, styled-components, micro-frontends</div>
+            <div class="skill-category"><strong>Data Vis & UI:</strong> Highcharts, AG-Grid, ECharts, JointJS, MapUI Map2D</div>
+            <div class="skill-category"><strong>Backend & APIs:</strong> Java, Spring Boot, Spring MVC, JDBC, REST APIs, WebSockets, Tomcat</div>
+            <div class="skill-category"><strong>Testing & Quality:</strong> Selenium, Cypress, Jest, TDD, WCAG accessibility, CVE remediation</div>
+            <div class="skill-category"><strong>Cloud & DevOps:</strong> GitLab CI/CD, Jenkins, Git, Azure, AWS (EC2, S3), Nginx, Linux, Maven</div>
+            <div class="skill-category"><strong>Practices:</strong> Agile/Scrum, RBAC, i18n/NLS, observability, cross-team enablement</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+        
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Senior Software Engineer</span>, 
+                    <span class="job-company">Nokia of America Corp</span> (Murray Hill, NJ)
+                </div>
+                <div class="job-date">Jan 2019 - Present</div>
+            </div>
+            <ul>
+                <li>Drove an AI-integrated software development life cycle across the team, adopted Cursor as the primary IDE for LLM-assisted coding, and embedded AI into GitLab CI/CD for automated testing and review across 48+ tracked tickets.</li>
+                <li>Sole engineer behind the Timeline and Connection Structure features; designed and migrated them into the shared @optics/redux-framework library (12K+ LOC) adopted by 5+ WaveSuite products.</li>
+                <li>Top contributor to Nokia's GHC ui-framework design system with 447 commits (#2 all-time on the shared component library) extending reusable CCFK primitives.</li>
+                <li>Architected a multi-datasource streaming Timeline spanning the NOC React app, redux-framework, and an OTN micro-frontend using IntersectionObserver to eliminate back-end thread-pool exhaustion crashes.</li>
+                <li>Engineered live Connection Structure / payload-bar visualizations for ODUk/ODUflex tunnels using React, JointJS, and TypeScript to replace static SVGs.</li>
+                <li>Replaced legacy charting infrastructure with Highcharts, rewriting all items into a single consistent, accessible charting layer.</li>
+                <li>Modernized Webpack + Babel builds (12 config files), introduced a React render profiler, and patched AG-Grid CVEs to restore deterministic CI builds.</li>
+                <li>Owned a cross-stack Spectrum CSV multipart-upload lift end-to-end across React UI, OTN Spring services, and legacy webUI to handle 22 MB+ optical plans.</li>
+                <li>Delivered the ODUFlex Bandwidth Adjustment feature end-to-end, enabling live ODUFlex resizing on the managed-plane domain with zero traffic interruption.</li>
+                <li>Built automated test coverage with Selenium and Cypress to caught regressions before release and boost cross-browser reliability.</li>
+                <li>Maintained the organization-wide local Tomcat simulation environment used by 70+ developers across the US, India, and Italy.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
+                    <span class="job-title">Full-Stack Software Engineer</span>, 
+                    <span class="job-company">LEEDS LLC (Contract via Mercury Systems)</span> (Newark, NJ)
+                </div>
+                <div class="job-date">Feb 2016 - Dec 2018</div>
+            </div>
+            <ul>
+                <li>Engineered CrimeCenter, a law-enforcement records-management system spanning incident response, analytics, and evidence tracking.</li>
+                <li>Built dynamic UI components with HTML5/CSS3, JavaScript, jQuery, Bootstrap, and Knockout.js, alongside a no-code worksheet configuration page.</li>
+                <li>Developed backend services using Spring MVC with SQL Server on Azure, including an offline-first local storage record system for officers.</li>
+                <li>Built a high-performance Solr-backed search with security auditing and a Quartz pipeline submitting data to a national NIEM database.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div>
