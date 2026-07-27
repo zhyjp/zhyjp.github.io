@@ -1,227 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yipeng Zhang - Senior Software Engineer</title>
-    <style>
-        :root {
-            --primary-color: #1a365d;
-            --secondary-color: #2b6cb0;
-            --text-color: #2d3748;
-            --border-color: #e2e8f0;
-            --background-color: #ffffff;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-color);
-            background-color: #f7fafc;
-            line-height: 1.5;
-            margin: 0;
-            padding: 40px 20px;
-        }
-
-        .resume-container {
-            max-width: 850px;
-            margin: 0 auto;
-            background: var(--background-color);
-            padding: 50px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        header {
-            text-align: center;
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin: 0 0 5px 0;
-            font-weight: 700;
-        }
-
-        .subtitle {
-            font-size: 1.25rem;
-            color: var(--secondary-color);
-            margin: 0 0 15px 0;
-            font-weight: 600;
-        }
-
-        .contact-info {
-            font-size: 0.95rem;
-            color: #4a5568;
-        }
-
-        .contact-info a {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        h2 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 5px;
-            margin: 30px 0 15px 0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        p {
-            margin: 0 0 10px 0;
-            font-size: 1rem;
-            text-align: justify;
-        }
-
-        .job {
-            margin-bottom: 25px;
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 5px;
-        }
-
-        .job-title {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .job-company {
-            color: var(--secondary-color);
-            font-weight: 600;
-        }
-
-        .job-date {
-            color: #718096;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        ul {
-            margin: 0 0 15px 0;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 6px;
-            font-size: 0.95rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 10px 20px;
-        }
-
-        .skill-category {
-            font-size: 0.95rem;
-        }
-
-        .skill-category strong {
-            color: var(--primary-color);
-        }
-
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            .resume-container { padding: 20px; }
-            .job-header { flex-direction: column; }
-            .skills-grid { grid-template-columns: 1fr; }
-        }
-
-        @media print {
-            body { background: none; padding: 0; }
-            .resume-container { box-shadow: none; padding: 0; max-width: 100%; }
-            @page { margin: 1.5cm; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yipeng Zhang — Resume</title>
+<meta name="description" content="Yipeng Zhang — Senior Software Engineer, Full-Stack & Front-End">
+<style>
+  :root{
+    --bg:#0f1115;
+    --panel:#151922;
+    --panel-border:#242938;
+    --text:#dfe3ea;
+    --muted:#9aa4b2;
+    --accent:#5aa9ff;
+    --accent-soft:#1c3a5e;
+    --tag-bg:#1b2130;
+    --tag-border:#2c3346;
+    --max-width:860px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:"Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding:48px 24px 80px;
+  }
+  header.hero{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    margin-bottom:36px;
+    border-bottom:1px solid var(--panel-border);
+    padding-bottom:24px;
+  }
+  header.hero h1{
+    margin:0;
+    font-size:2.1rem;
+    letter-spacing:0.3px;
+    color:#fff;
+  }
+  header.hero .title{
+    color:var(--accent);
+    font-weight:600;
+    font-size:1.05rem;
+  }
+  .contact{
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    font-size:0.92rem;
+    color:var(--muted);
+  }
+  .contact a{
+    color:var(--muted);
+    text-decoration:none;
+    border-bottom:1px dashed transparent;
+  }
+  .contact a:hover{
+    color:var(--accent);
+    border-bottom-color:var(--accent);
+  }
+  .contact span.sep{color:var(--panel-border);}
+  nav.toc{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:18px;
+  }
+  nav.toc a{
+    font-size:0.8rem;
+    color:var(--muted);
+    background:var(--tag-bg);
+    border:1px solid var(--tag-border);
+    padding:5px 12px;
+    border-radius:20px;
+    text-decoration:none;
+  }
+  nav.toc a:hover{
+    color:var(--accent);
+    border-color:var(--accent);
+  }
+  section{
+    margin-bottom:38px;
+  }
+  section h2{
+    font-size:0.85rem;
+    text-transform:uppercase;
+    letter-spacing:1.8px;
+    color:var(--accent);
+    margin:0 0 16px 0;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--panel-border);
+  }
+  .summary p{
+    margin:0;
+    color:var(--text);
+    font-size:0.98rem;
+  }
+  .skills-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:12px;
+  }
+  .skill-row{
+    display:grid;
+    grid-template-columns:190px 1fr;
+    gap:14px;
+    padding:10px 0;
+    border-bottom:1px dashed var(--panel-border);
+    font-size:0.92rem;
+  }
+  .skill-row:last-child{border-bottom:none;}
+  .skill-row .label{
+    color:#fff;
+    font-weight:600;
+  }
+  .skill-row .value{
+    color:var(--muted);
+  }
+  .job{
+    margin-bottom:30px;
+    position:relative;
+    padding-left:18px;
+    border-left:2px solid var(--panel-border);
+  }
+  .job:last-child{margin-bottom:0;}
+  .job::before{
+    content:"";
+    position:absolute;
+    left:-7px;
+    top:4px;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 3px var(--bg);
+  }
+  .job-header{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:6px 16px;
+    margin-bottom:2px;
+  }
+  .job-header .company{
+    font-weight:700;
+    color:#fff;
+    font-size:1.05rem;
+  }
+  .job-header .dates{
+    color:var(--muted);
+    font-size:0.88rem;
+    white-space:nowrap;
+  }
+  .job .role{
+    color:var(--accent);
+    font-weight:600;
+    font-size:0.95rem;
+    margin-bottom:10px;
+  }
+  .job ul{
+    margin:0;
+    padding-left:20px;
+  }
+  .job ul li{
+    margin-bottom:9px;
+    font-size:0.94rem;
+    color:var(--text);
+  }
+  .job ul li:last-child{margin-bottom:0;}
+  strong{color:#fff;}
+  .edu-item{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:8px;
+    font-size:0.95rem;
+  }
+  .edu-item .degree{
+    font-weight:700;
+    color:#fff;
+  }
+  .edu-item .school{
+    color:var(--muted);
+  }
+  footer{
+    margin-top:50px;
+    text-align:center;
+    color:var(--muted);
+    font-size:0.8rem;
+  }
+  @media print{
+    body{background:#fff;color:#111;}
+    .wrap{max-width:100%;padding:0 20px;}
+    nav.toc{display:none;}
+    section h2{color:#333;border-bottom-color:#ccc;}
+    .job{border-left-color:#ccc;}
+    .job::before{background:#555;box-shadow:none;}
+    a{color:#111 !important;}
+  }
+  @media (max-width:600px){
+    .skill-row{grid-template-columns:1fr;}
+    header.hero h1{font-size:1.7rem;}
+  }
+</style>
 </head>
 <body>
+<div class="wrap">
 
-<div class="resume-container">
-    <header>
-        <h1>Yipeng Zhang</h1>
-        <div class="subtitle">Senior Software Engineer | Full-Stack & Front-End</div>
-        <div class="contact-info">
-            (201) 960-8732 &nbsp;|&nbsp; 
-            <a href="mailto:yipeng.zhang.careers@gmail.com">yipeng.zhang.careers@gmail.com</a> &nbsp;|&nbsp; 
-            Metuchen, NJ &nbsp;|&nbsp; 
-            <a href="https://linkedin.com" target="_blank">://linkedin.com</a>
-        </div>
-    </header>
+  <header class="hero">
+    <h1>Yipeng Zhang</h1>
+    <div class="title">Senior Software Engineer | Full-Stack &amp; Front-End</div>
+    <div class="contact">
+      <a href="tel:+12019608732">(201) 960-8732</a>
+      <span class="sep">•</span>
+      <a href="mailto:yipeng.zhang.careers@gmail.com">yipeng.zhang.careers@gmail.com</a>
+      <span class="sep">•</span>
+      <span>Metuchen, NJ</span>
+      <span class="sep">•</span>
+      <a href="https://linkedin.com/in/zhang-yipeng" target="_blank" rel="noopener">linkedin.com/in/zhang-yipeng</a>
+    </div>
+    <nav class="toc">
+      <a href="#summary">Summary</a>
+      <a href="#skills">Technical Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+    </nav>
+  </header>
 
-    <section>
-        <h2>Professional Summary</h2>
-        <p>Senior full-stack / front-end engineer with 12+ years delivering production web applications, including 7+ years at Nokia building React + TypeScript platforms for the WaveSuite optical-DWDM and OTN network-management product family. Sole author of major UI features later extracted into shared libraries reused across 5+ products, sustaining 970+ resolved tickets and 2,600+ commits across OTN, the shared redux-framework, and Nokia's GHC ui-framework, with deep ownership across React, Java/Spring REST services, build systems, and GitLab CI/CD. Use an AI-integrated SDLC, Cursor as primary IDE and AI embedded in CI/CD for testing, release, and review, keeping human review on architecture and quality.</p>
-    </section>
+  <section id="summary">
+    <h2>Professional Summary</h2>
+    <div class="summary">
+      <p>Senior full-stack / front-end engineer with 12+ years delivering production web applications, including 7+ years at Nokia building React + TypeScript platforms for the WaveSuite optical-DWDM and OTN network-management product family. Sole author of major UI features later extracted into shared libraries reused across 5+ products, sustaining 970+ resolved tickets and 2,600+ commits across OTN, the shared redux-framework, and Nokia's GHC ui-framework, with deep ownership across React, Java/Spring REST services, build systems, and GitLab CI/CD. Use an AI-integrated SDLC, Cursor as primary IDE and AI embedded in CI/CD for testing, release, and review, keeping human review on architecture and quality.</p>
+    </div>
+  </section>
 
-    <section>
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-category"><strong>AI-Augmented:</strong> Cursor, LLM refactoring, GitLab CI/CD AI automation, prompt engineering</div>
-            <div class="skill-category"><strong>Languages:</strong> TypeScript, JavaScript, Java, Python, SQL, HTML5, CSS3</div>
-            <div class="skill-category"><strong>Frontend:</strong> React, Redux, redux-saga, React Router, styled-components, micro-frontends</div>
-            <div class="skill-category"><strong>Data Vis & UI:</strong> Highcharts, AG-Grid, ECharts, JointJS, MapUI Map2D</div>
-            <div class="skill-category"><strong>Backend & APIs:</strong> Java, Spring Boot, Spring MVC, JDBC, REST APIs, WebSockets, Tomcat</div>
-            <div class="skill-category"><strong>Testing & Quality:</strong> Selenium, Cypress, Jest, TDD, WCAG accessibility, CVE remediation</div>
-            <div class="skill-category"><strong>Cloud & DevOps:</strong> GitLab CI/CD, Jenkins, Git, Azure, AWS (EC2, S3), Nginx, Linux, Maven</div>
-            <div class="skill-category"><strong>Practices:</strong> Agile/Scrum, RBAC, i18n/NLS, observability, cross-team enablement</div>
-        </div>
-    </section>
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <div class="label">AI-Augmented Development</div>
+        <div class="value">Cursor (primary IDE), LLM-assisted coding &amp; refactoring, AI embedded in GitLab CI/CD (automated unit tests, release publishing, merge-request review), AI-generated test scaffolding, prompt engineering, AI across the full SDLC</div>
+      </div>
+      <div class="skill-row">
+        <div class="label">Languages</div>
+        <div class="value">TypeScript, JavaScript, Java, Python, SQL, HTML5, CSS3</div>
+      </div>
+      <div class="skill-row">
+        <div class="label">Frontend</div>
+        <div class="value">React, Redux, redux-saga, React Router, styled-components, micro-frontends, design systems, Webpack, Babel, Node.js</div>
+      </div>
+      <div class="skill-row">
+        <div class="label">Data Visualization &amp; UI</div>
+        <div class="value">Highcharts, AG-Grid, ECharts, JointJS, MapUI Map2D, Nokia CCFK, Material-UI</div>
+      </div>
+      <div class="skill-row">
+        <div class="label">Backend &amp; APIs</div>
+        <div class="value">Java, Spring / Spring Boot, Spring MVC, JDBC, REST API design, WebSocket / socket.io, Tomcat</div>
+      </div>
+      <div class="skill-row">
+        <div class="label">Testing &amp; Quality</div>
+        <div class="value">Selenium, Cypress, Jest, end-to-end &amp; integration testing, TDD, accessibility (WCAG), cross-browser support, CVE remediation</div>
+      </div>
+      <div class="skill-row">
+        <div class="label">Cloud &amp; DevOps</div>
+        <div class="value">GitLab CI/CD, Jenkins, Git, Microsoft Azure, AWS (EC2, S3), Nginx, Linux, Maven</div>
+      </div>
+      <div class="skill-row">
+        <div class="label">Practices</div>
+        <div class="value">Agile/Scrum, RBAC, i18n/NLS, observability &amp; logging, developer tooling &amp; automation, cross-team enablement</div>
+      </div>
+    </div>
+  </section>
 
-    <section>
-        <h2>Professional Experience</h2>
-        
-        <div class="job">
-            <div class="job-header">
-                <div>
-                    <span class="job-title">Senior Software Engineer</span>, 
-                    <span class="job-company">Nokia of America Corp</span> (Murray Hill, NJ)
-                </div>
-                <div class="job-date">Jan 2019 - Present</div>
-            </div>
-            <ul>
-                <li>Drove an AI-integrated software development life cycle across the team, adopted Cursor as the primary IDE for LLM-assisted coding, and embedded AI into GitLab CI/CD for automated testing and review across 48+ tracked tickets.</li>
-                <li>Sole engineer behind the Timeline and Connection Structure features; designed and migrated them into the shared @optics/redux-framework library (12K+ LOC) adopted by 5+ WaveSuite products.</li>
-                <li>Top contributor to Nokia's GHC ui-framework design system with 447 commits (#2 all-time on the shared component library) extending reusable CCFK primitives.</li>
-                <li>Architected a multi-datasource streaming Timeline spanning the NOC React app, redux-framework, and an OTN micro-frontend using IntersectionObserver to eliminate back-end thread-pool exhaustion crashes.</li>
-                <li>Engineered live Connection Structure / payload-bar visualizations for ODUk/ODUflex tunnels using React, JointJS, and TypeScript to replace static SVGs.</li>
-                <li>Replaced legacy charting infrastructure with Highcharts, rewriting all items into a single consistent, accessible charting layer.</li>
-                <li>Modernized Webpack + Babel builds (12 config files), introduced a React render profiler, and patched AG-Grid CVEs to restore deterministic CI builds.</li>
-                <li>Owned a cross-stack Spectrum CSV multipart-upload lift end-to-end across React UI, OTN Spring services, and legacy webUI to handle 22 MB+ optical plans.</li>
-                <li>Delivered the ODUFlex Bandwidth Adjustment feature end-to-end, enabling live ODUFlex resizing on the managed-plane domain with zero traffic interruption.</li>
-                <li>Built automated test coverage with Selenium and Cypress to caught regressions before release and boost cross-browser reliability.</li>
-                <li>Maintained the organization-wide local Tomcat simulation environment used by 70+ developers across the US, India, and Italy.</li>
-            </ul>
-        </div>
+  <section id="experience">
+    <h2>Professional Experience</h2>
 
-        <div class="job">
-            <div class="job-header">
-                <div>
-                    <span class="job-title">Full-Stack Software Engineer</span>, 
-                    <span class="job-company">LEEDS LLC (Contract via Mercury Systems)</span> (Newark, NJ)
-                </div>
-                <div class="job-date">Feb 2016 - Dec 2018</div>
-            </div>
-            <ul>
-                <li>Engineered CrimeCenter, a law-enforcement records-management system spanning incident response, analytics, and evidence tracking.</li>
-                <li>Built dynamic UI components with HTML5/CSS3, JavaScript, jQuery, Bootstrap, and Knockout.js, alongside a no-code worksheet configuration page.</li>
-                <li>Developed backend services using Spring MVC with SQL Server on Azure, including an offline-first local storage record system for officers.</li>
-                <li>Built a high-performance Solr-backed search with security auditing and a Quartz pipeline submitting data to a national NIEM database.</li>
-            </ul>
-        </div>
+    <div class="job">
+      <div class="job-header">
+        <div class="company">Nokia of America Corp, Murray Hill, NJ</div>
+        <div class="dates">Jan 2019 – Present</div>
+      </div>
+      <div class="role">Senior Software Engineer, WaveSuite NOC / OTN Network Management</div>
+      <ul>
+        <li><strong>Drove an AI-integrated software development life cycle</strong> across the team, adopted <strong>Cursor as the primary IDE</strong> for LLM-assisted coding and refactoring, and embedded <strong>AI into the GitLab CI/CD pipeline</strong> to generate unit tests, automate version publishing/release, and assist merge-request review, shipping <strong>AI-assisted changes across 48+ tracked tickets</strong> with human review before every merge.</li>
+        <li><strong>Sole engineer behind the Timeline and Connection Structure features</strong>, designed, built, and maintained both end-to-end, then <strong>migrated them into the shared @optics/redux-framework library (12K+ LOC), adopted by 5+ WaveSuite products</strong> (WSNOC, NFM-T, OTN-React, WSS/WSO shells); act as the <strong>internal SME</strong>, providing cross-team tech support and onboarding across many features.</li>
+        <li><strong>Top contributor to Nokia's GHC ui-framework design system</strong>, 447 commits (#2 all-time on the shared component library), extending reusable CCFK primitives and component documentation reused across multiple WaveSuite products.</li>
+        <li><strong>Architected the multi-datasource streaming Timeline</strong> (alarms / historical alarms / historical routes) spanning the NOC React app, the redux-framework library, and an OTN micro-frontend, with IntersectionObserver-driven Load-More, severity enum-to-label mapping, and request pacing that <strong>eliminated a recurring back-end thread-pool exhaustion crash</strong>.</li>
+        <li><strong>Engineered the live Connection Structure / payload-bar visualization</strong> for ODUk/ODUflex tunnels with <strong>React + JointJS + TypeScript</strong>, replacing a static SVG with a data-driven component and iterating across overlap labels, Managed-Plane roles, and EPR-rerouted Super-C bandwidth alignment.</li>
+        <li><strong>Replaced the application's legacy charting library with Highcharts</strong>, rewriting all charts into a single consistent, accessible charting layer.</li>
+        <li><strong>Modernized the Webpack + Babel build</strong> (12 config files), added a reusable React render profiler, restored the Linux build pipeline, and patched <strong>AG-Grid CVEs</strong> via a lockfile patcher, restoring deterministic CI builds for security audits.</li>
+        <li><strong>Owned a cross-stack Spectrum CSV multipart-upload lift end-to-end</strong>, React UI, a spectrumConstraint migration in the OTN Spring service, and a Java hotfix in the legacy webUI, enabling <strong>22 MB+ optical-spectrum plans</strong> to import successfully across three repositories.</li>
+        <li><strong>Delivered the ODUFlex Bandwidth Adjustment feature</strong> end-to-end, OTN Spring controller/service + React GUI + i18n bundles, enabling live ODUFlex resize on the managed-plane domain with <strong>zero traffic interruption</strong>.</li>
+        <li><strong>Built end-to-end and integration test coverage with Selenium and Cypress</strong>, catching regressions before release and improving cross-browser reliability for telco customers.</li>
+        <li><strong>Boosted developer productivity org-wide</strong> by authoring reusable internal tooling and automation (Jira management, production debugging/testing) and maintaining the organization-wide local Tomcat simulation env used by around 70 developers across the US, India, and Italy.</li>
+      </ul>
+    </div>
 
-        <div class="job">
-            <div class="job-header">
-                <div>
+    <div class="job">
+      <div class="job-header">
+        <div class="company">LEEDS LLC (Contract via Mercury Systems Inc.), Newark, NJ</div>
+        <div class="dates">Feb 2016 – Dec 2018</div>
+      </div>
+      <div class="role">Full-Stack Software Engineer</div>
+      <ul>
+        <li>Engineered <strong>CrimeCenter</strong>, a law-enforcement records-management system spanning incident response, investigations, analytics, and evidence tracking, delivered in two-week Agile sprints.</li>
+        <li>Built dynamic, responsive UI components with <strong>HTML5/CSS3, JavaScript, jQuery, Bootstrap, and Knockout.js</strong>, and a no-code configuration page that let non-technical officers build custom worksheets.</li>
+        <li>Developed backend services in <strong>Spring MVC with SQL Server on Microsoft Azure</strong>, plus an <strong>offline-first record system</strong> using local storage so officers could keep working in low-connectivity areas and sync on reconnect.</li>
+        <li>Built a high-performance <strong>Solr-backed search</strong> with security auditing, a <strong>Quartz</strong> audit/validation pipeline submitting to a national NIEM database, and <strong>Selenium</strong>-based automated test suites.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="company">Verizon Wireless (Contract via Mercury Systems Inc.), Warren, NJ</div>
+        <div class="dates">Sep 2013 – Jan 2016</div>
+      </div>
+      <div class="role">Software Engineer, Front-End</div>
+      <ul>
+        <li>Revamped the <strong>Verizon Cloud (BUA+)</strong> application, enabling millions of subscribers to back up contacts and media to online storage, using <strong>HTML5, CSS3, Backbone.js, and RequireJS</strong>.</li>
+        <li>Built <strong>Single Page Applications (SPA)</strong> with Backbone (Router, Template, Model) and lazy-loaded views, plus reusable UI primitives (nav bar, dropdowns, modals, pagination).</li>
+        <li>Engineered an independent <strong>HTML5 file uploader</strong> that replaced legacy Adobe Flash components and could be reused across applications.</li>
+        <li>Introduced <strong>continuous integration</strong> and automated <strong>unit + E2E testing</strong>, and prototyped a next-generation <strong>AngularJS</strong> rebuild to improve data-binding performance and maintainability.</li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu-item">
+      <span class="degree">M.S. in Computer Science</span>
+      <span class="school">Stevens Institute of Technology, Hoboken, NJ</span>
+    </div>
+  </section>
+
+  <footer>
+    Yipeng Zhang &nbsp;·&nbsp; Résumé
+  </footer>
+
+</div>
+</body>
+</html>
